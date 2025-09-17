@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamza Bashir - Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #1e88e5;
+      color: white;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin: 0 15px;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Projects Section */
+    .projects {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      color: #1e88e5;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .project-card a {
+      text-decoration: none;
+      color: #1e88e5;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #1e88e5;
+      color: white;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="pic.jpeg" alt="Profile Pic">
+    <h1>Hamza Bashir</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Project.html">Projects</a>
+    </nav>
+  </header>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-list">
+      <div class="project-card">
+        <a href="#">Console based Ludo game in C++</a>
+      </div>
+      <div class="project-card">
+        <a href="#">Snake game in Assembly Language</a>
+      </div>
+      <div class="project-card">
+        <a href="#">Shortest Path Calculation in C++</a>
+      </div>
+      <div class="project-card">
+        <a href="#">School Management System in C++</a>
+      </div>
+      <div class="project-card">
+        <a href="#">Logistics & Transport System with Web Frontend</a>
+      </div>
+      <div class="project-card">
+        <a href="#">WiFi-based Electricity Control (ESP32)</a>
+      </div>
+      <div class="project-card">
+        <a href="#">API-based Weather App (HTML, CSS, JS)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Hamza Bashir | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

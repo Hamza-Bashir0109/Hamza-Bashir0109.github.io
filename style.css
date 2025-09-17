@@ -1,0 +1,189 @@
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #121212);
+  color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== Container Layout ===== */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  height: 90vh;
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.25);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== Sidebar (Profile) ===== */
+.profile {
+  flex: 1;
+  background: #141414;
+  padding: 30px 20px;
+  text-align: center;
+  border-right: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.08);
+}
+
+.profile h1 {
+  color: #00ffcc;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #e6e6e6;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.nav a:hover {
+  background: #00ffcc;
+  color: #121212;
+  border: 1px solid #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* ===== Content ===== */
+.content {
+  flex: 2;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.content h2 {
+  color: #00ffcc;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.content p, .content li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.education ul {
+  list-style: none;
+}
+
+.education li::before {
+  content: "▹ ";
+  color: #00ffcc;
+}
+
+/* ===== Contact Section ===== */
+.contact .social {
+  margin-top: 12px;
+  display: flex;
+  gap: 15px;
+}
+
+.contact a {
+  color: #00ffcc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
+  color: #ffffff;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .profile {
+    border-right: none;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+footer {
+  width: 100%;
+  background: #141414;
+  text-align: center;
+  padding: 15px 10px;
+  color: #e6e6e6;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2a2a;
+  position: fixed;   /* keeps footer at bottom */
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 10px rgba(0, 255, 204, 0.2);
+}
+
+footer p {
+  margin: 0;
+  color: #00ffcc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer p:hover {
+  color: #ffffff;
+}
